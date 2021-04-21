@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/ind', function () {
+    return view('Index/index');
+});
+Route::get('/del', function () {
+    return view('Delete/delete');
+});
+Route::get('/upd', function () {
+    return view('Update/update');
+});
+
+Route::get('/schedules', 'ScheduleController@index');
