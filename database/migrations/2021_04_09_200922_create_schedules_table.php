@@ -15,12 +15,14 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('schedule_number');
-            $table->bigInteger('credit');
-            $table->bigInteger('absence');
+            $table->bigInteger('term_number');
+            $table->bigInteger('day_number');
+            $table->bigInteger('period_number');
             $table->string('name');
             $table->string('place');
+            $table->bigInteger('absence');
             $table->text('note');
+            $table->bigInteger('credit');
             $table->timestamps();
         });
     }
