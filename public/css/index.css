@@ -18,6 +18,7 @@ html, body {
     margin:2px;
     height:130px;
     width:110px;
+    position: relative;
 }
     
 .leftPeriod{
@@ -44,3 +45,17 @@ html, body {
 .deleteImage{
     transform: translate(0, -30px);
 }
+.timetable{
+    z-index: 1;
+}
+
+.classDetail{
+    z-index: 2;
+    height: 400px;
+    width: 300px;
+    background-color:rgba(10,10,10,0.2);
+    position: absolute;
+    display:none;
+}
+
+

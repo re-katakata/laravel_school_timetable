@@ -3,6 +3,8 @@
 @section('content')
         <link rel="stylesheet" href="../css/index.css">
         <script src="../script/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../script/index_jquely.js"></script>
        
         <div class="blackboard">
             <form id="tnurl" action="">
@@ -30,6 +32,11 @@
                                 <a href="/del/{{$mondaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$mondaySchedules[$j]['id']}}?dayN=0&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail monday{{$j}}Detail">
+                                
+                            </div>
+
                         @endfor
                     </div>
                     
@@ -42,6 +49,10 @@
                                 <a href="/del/{{$tuesdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$tuesdaySchedules[$j]['id']}}?dayN=1&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail tuesday{{$j}}Detail">
+                                
+                            </div>                        
                         @endfor
 
                     </div>
@@ -55,6 +66,10 @@
                                 <a href="/del/{{$wednesdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$wednesdaySchedules[$j]['id']}}?dayN=2&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail wednesday{{$j}}Detail">
+                                
+                            </div>                            
                         @endfor
 
                     </div>
@@ -68,6 +83,10 @@
                                 <a href="/del/{{$thursdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$thursdaySchedules[$j]['id']}}?dayN=3&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail thursday{{$j}}Detail">
+                                
+                            </div>                            
                         @endfor
 
                     </div>
@@ -81,6 +100,10 @@
                                 <a href="/del/{{$fridaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$fridaySchedules[$j]['id']}}?dayN=4&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail friday{{$j}}Detail">
+                                
+                            </div>                            
                         @endfor
 
                     </div>
@@ -94,6 +117,10 @@
                                 <a href="/del/{{$saturdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$saturdaySchedules[$j]['id']}}?dayN=5&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail saturday{{$j}}Detail">
+                                
+                            </div>                            
                         @endfor
 
                     </div>
@@ -107,6 +134,10 @@
                                 <a href="/del/{{$sundaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/n0727.png" width="65" height="65"></a>
                                 <a href="/upd/{{$sundaySchedules[$j]['id']}}?dayN=6&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/00038.png" width="28" height="28"></a>
                             </div>
+                            
+                            <div class="classDetail sunday{{$j}}Detail">
+                                
+                            </div>                            
                         @endfor
 
                     </div>
@@ -116,4 +147,6 @@
                 
             </div>
         </div>
+        
+        
 @endsection

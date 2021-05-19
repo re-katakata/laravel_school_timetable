@@ -21,16 +21,15 @@ Route::get('/upd', 'ScheduleController@showUpdate')->middleware('auth');
 
 Route::get('/upd/{schedule}', 'ScheduleController@showEdit')->middleware('auth');
 
-Route::put('/schedules/{schedule}','ScheduleController@edit');
+Route::put('/schedules/{schedule}','ScheduleController@edit')->middleware('auth');
 
 Route::get('/del/{schedule}', 'ScheduleController@showDelete')->middleware('auth');
 
 Route::get('/del', 'ScheduleController@showIndexFromDel')->middleware('auth');
 
-Route::post('/schedules', 'ScheduleController@store');
+Route::post('/schedules', 'ScheduleController@store')->middleware('auth');
 
-Route::delete('/schedules/{schedule}/delete', 'ScheduleController@delete');
+Route::delete('/schedules/{schedule}/delete', 'ScheduleController@delete')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
