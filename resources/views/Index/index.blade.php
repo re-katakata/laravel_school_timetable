@@ -36,6 +36,7 @@
                             <div class="classDetail monday{{$j}}Detail">
                             
                                 
+                                
                             </div>
 
                         @endfor
