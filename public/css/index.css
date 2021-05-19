@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+}
+
+.dotw{
+    text-align:center;
+}
+  
+.dayLine{
+    float:left;
+    margin:5px;
+}
+    
+.classBlocks{
+    border:1px solid gray;
+    background-color:rgb(10,100,100);
+    border-radius:5px;
+    margin:2px;
+    height:130px;
+    width:110px;
+}
+    
+.leftPeriod{
+    border:1px solid gray;
+    background-color:rgba(100,100,100,0.7);
+    border-radius:5px;
+    margin:2px;
+    height:130px;
+    width:30px;
+}
+    
+.leftP{
+    text-align:center;
+}
+
+.sundayBlock{
+    background-color:rgb(100,0,0);
+}
+
+.editImage{
+    transform: translate(0, -47px);
+}
+
+.deleteImage{
+    transform: translate(0, -30px);
+}

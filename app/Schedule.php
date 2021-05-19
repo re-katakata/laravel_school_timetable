@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     
-    
     protected $fillable = [
+        'user_id',
         'term_number',
         'day_number',
         'period_number',
@@ -21,34 +21,34 @@ class Schedule extends Model
     ];
     
     //名前をわかりやすく
-    public function getMondaySchedules($term_number)
+    public function getMondaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',0)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',0)->get();
         }
         
-    public function getTuesdaySchedules($term_number)
+    public function getTuesdaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',1)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',1)->get();
         }
-    public function getWednesdaySchedules($term_number)
+    public function getWednesdaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',2)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',2)->get();
         }    
-    public function getThursdaySchedules($term_number)
+    public function getThursdaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',3)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',3)->get();
         } 
-    public function getFridaySchedules($term_number)
+    public function getFridaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',4)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',4)->get();
         } 
-    public function getSaturdaySchedules($term_number)
+    public function getSaturdaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',5)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',5)->get();
         }
-    public function getSundaySchedules($term_number)
+    public function getSundaySchedules($term_number,$user_id)
         {
-            return $this ->orderBy('created_at', 'ASC')->where('term_number',$term_number)->where('day_number', '=',6)->get();
+            return $this ->orderBy('created_at', 'ASC')->where('user_id',$user_id)->where('term_number',$term_number)->where('day_number', '=',6)->get();
         }     
 }
 
