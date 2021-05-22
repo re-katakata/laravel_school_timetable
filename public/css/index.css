@@ -2,32 +2,52 @@ html, body {
     margin: 0;
 }
 
+.blackboard{
+    width: 1200px;
+    height: 1200px;
+}
+
+.timeTable{
+    margin-left: 30px;
+    margin-top: 50px;
+
+}
+
 .dotw{
     text-align:center;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
   
 .dayLine{
     float:left;
-    margin:5px;
-}
+    margin:8px;
     
+}
+
+#invisible{
+    opacity: 0;
+}
+
 .classBlocks{
     border:1px solid gray;
-    background-color:rgb(10,100,100);
+    background-color:rgb(10,150,150);
     border-radius:5px;
-    margin:2px;
-    height:130px;
-    width:110px;
+    margin:10px;
+    height:140px;
+    width:120px;
     position: relative;
 }
     
 .leftPeriod{
     border:1px solid gray;
-    background-color:rgba(100,100,100,0.7);
+    background-color:rgba(120,120,120,0.7);
     border-radius:5px;
-    margin:2px;
-    height:130px;
+    margin:10px;
+    height:140px;
     width:30px;
+    padding-top: 50px;
+
 }
     
 .leftP{
@@ -35,15 +55,19 @@ html, body {
 }
 
 .sundayBlock{
-    background-color:rgb(100,0,0);
+    background-color:rgb(150,0,0);
 }
 
 .editImage{
-    transform: translate(0, -47px);
+    position: absolute;
+    top:100px;
+    left:10px;
 }
 
 .deleteImage{
-    transform: translate(0, -30px);
+    position: absolute;
+    top:100px;
+    left:80px;
 }
 .timetable{
     z-index: 1;
@@ -53,9 +77,50 @@ html, body {
     z-index: 2;
     height: 400px;
     width: 300px;
-    background-color:rgba(10,10,10,0.2);
-    position: absolute;
+    border:1px solid gray;
+    border-radius: 8px;
+    background-color:white;
     display:none;
+    position: absolute;
+    top: 70px;
+    left:20px;
+    opacity: 0;
+    transition-duration:2s;
+    overflow-y: scroll;
 }
 
+#tnurl{
+    margin-left: 30px;
+    margin-top: 30px;
+}
 
+.className{
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+    font-family: serif;
+    
+}
+
+#tnRight{
+    width:150px;
+    margin-right: 10px;
+}
+
+#tnSubmit{
+    background-color: black;
+    color:white;
+    border:none;
+    font-size: smaller;
+}
+
+#creditSum{
+    transform: translate(30px,0px);
+}
+
+.detailContents{
+    margin:10px 10px 20px 10px;
+    word-break:break-all;
+}

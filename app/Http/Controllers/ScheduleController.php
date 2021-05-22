@@ -15,6 +15,7 @@ class ScheduleController extends Controller
         //user_id取得後はそれを各viewにパラメータとして渡し、データの登録、更新時に見えない項目として設置
         
         $user_id=Auth::id();
+        $credit_sum=0;
         
         if(isset($_GET['term_number']))
         {
@@ -46,6 +47,7 @@ class ScheduleController extends Controller
             $mondayArray[$mondaySchedulePeriod]['absence']=$mondaySchedule->absence;
             $mondayArray[$mondaySchedulePeriod]['note']=$mondaySchedule->note;
             $mondayArray[$mondaySchedulePeriod]['credit']=$mondaySchedule->credit;
+            $credit_sum+=$mondaySchedule->credit;
         }
         
         
@@ -73,6 +75,7 @@ class ScheduleController extends Controller
             $tuesdayArray[$tuesdaySchedulePeriod]['absence']=$tuesdaySchedule->absence;
             $tuesdayArray[$tuesdaySchedulePeriod]['note']=$tuesdaySchedule->note;
             $tuesdayArray[$tuesdaySchedulePeriod]['credit']=$tuesdaySchedule->credit;
+            $credit_sum+=$tuesdaySchedule->credit;
         }
         
         
@@ -100,6 +103,7 @@ class ScheduleController extends Controller
             $wednesdayArray[$wednesdaySchedulePeriod]['absence']=$wednesdaySchedule->absence;
             $wednesdayArray[$wednesdaySchedulePeriod]['note']=$wednesdaySchedule->note;
             $wednesdayArray[$wednesdaySchedulePeriod]['credit']=$wednesdaySchedule->credit;
+            $credit_sum+=$wednesdaySchedule->credit;
         }
         
         
@@ -127,6 +131,7 @@ class ScheduleController extends Controller
             $thursdayArray[$thursdaySchedulePeriod]['absence']=$thursdaySchedule->absence;
             $thursdayArray[$thursdaySchedulePeriod]['note']=$thursdaySchedule->note;
             $thursdayArray[$thursdaySchedulePeriod]['credit']=$thursdaySchedule->credit;
+            $credit_sum+=$thursdaySchedule->credit;
         }
         
         
@@ -154,6 +159,7 @@ class ScheduleController extends Controller
             $fridayArray[$fridaySchedulePeriod]['absence']=$fridaySchedule->absence;
             $fridayArray[$fridaySchedulePeriod]['note']=$fridaySchedule->note;
             $fridayArray[$fridaySchedulePeriod]['credit']=$fridaySchedule->credit;
+            $credit_sum+=$fridaySchedule->credit;
         }
         
         
@@ -181,6 +187,7 @@ class ScheduleController extends Controller
             $saturdayArray[$saturdaySchedulePeriod]['absence']=$saturdaySchedule->absence;
             $saturdayArray[$saturdaySchedulePeriod]['note']=$saturdaySchedule->note;
             $saturdayArray[$saturdaySchedulePeriod]['credit']=$saturdaySchedule->credit;
+            $credit_sum+=$saturdaySchedule->credit;
         }
         
         
@@ -208,6 +215,7 @@ class ScheduleController extends Controller
             $sundayArray[$sundaySchedulePeriod]['absence']=$sundaySchedule->absence;
             $sundayArray[$sundaySchedulePeriod]['note']=$sundaySchedule->note;
             $sundayArray[$sundaySchedulePeriod]['credit']=$sundaySchedule->credit;
+            $credit_sum+=$sundaySchedule->credit;
         }
         
         //dd($mondayArray);
@@ -225,6 +233,7 @@ class ScheduleController extends Controller
             'days' => $days,
             'periods' => $periods,
             'term_number' =>$term_number,
+            'credit_sum'=>$credit_sum,
         ]);
         
         
