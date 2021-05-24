@@ -1,0 +1,54 @@
+.formContents{
+    width: 100%;
+    height:100%;
+
+    
+}
+
+h3{
+    text-align: center;
+    margin-top: 30px;
+}
+h2{
+    text-align: center;
+    margin-top: 10px;
+}
+h4{
+    text-align: center;
+    margin-top: 10px;
+}
+
+input{
+    width:200px;
+    height: 50px;
+    border:solid 1px black;
+    text-align: center;
+    background-color:black;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    top:300px;
+    left:45%;
+    transform: translateX(-200px);
+}
+
+.delete_no{
+    width:200px;
+    height: 50px;
+    border:solid 1px black;
+    background-color:black;
+    position: absolute;
+    top:300px;
+    left:55%;
+    padding-top: 10px;
+}
+
+.delete_no a{
+    text-decoration:none; 
+    text-align: center;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    
+}

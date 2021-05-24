@@ -3,13 +3,13 @@ html, body {
 }
 
 .blackboard{
-    width: 1200px;
+    width: 1300px;
     height: 1200px;
 }
 
 .timeTable{
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 40px;
 
 }
 
@@ -37,6 +37,7 @@ html, body {
     height:140px;
     width:120px;
     position: relative;
+    word-break: break-all;
 }
     
 .leftPeriod{
@@ -55,7 +56,7 @@ html, body {
 }
 
 .sundayBlock{
-    background-color:rgb(150,0,0);
+    background-color:rgb(150,40,10);
 }
 
 .editImage{
@@ -99,9 +100,10 @@ html, body {
     padding-top: 20px;
     padding-left: 3px;
     padding-right: 3px;
+    padding-bottom: 10px;
     font-weight: bold;
     font-family: serif;
-    
+    background-color: rgba(255,255,255,0.6);
 }
 
 #tnRight{

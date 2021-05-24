@@ -9,9 +9,11 @@
             <form id="tnurl" action="">
                 <h2 id="tnLeft">時間割 No.<input id="tnRight" type="number" required="required" name="term_number" value={{$term_number}} min=1 /><input id="tnSubmit" type="submit" value="表示"></h2>
             </form>
-
+            
+            <h4 id="creditSum">合計単位数：{{$credit_sum}}</4>
+            
             <div class="schedules">
-                <h4 id="creditSum">合計単位数：{{$credit_sum}}</4>
+                
                 <div class="timeTable">
                     <div class="dayLine">
                         <h2 id="invisible" class="dotw">⬜︎</h2>
@@ -31,7 +33,7 @@
                                 <a href="/del/{{$mondaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$mondaySchedules[$j]['id']}}?dayN=0&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail monday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$mondaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="mondayDetailPlace{{$j}}">{{$mondaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$mondaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$mondaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$mondaySchedules[$j]['note']}}</p>
@@ -54,7 +56,7 @@
                                 <a href="/del/{{$tuesdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$tuesdaySchedules[$j]['id']}}?dayN=1&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail tuesday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$tuesdaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="tuesdayDetailPlace{{$j}}">{{$tuesdaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$tuesdaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$tuesdaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$tuesdaySchedules[$j]['note']}}</p>
@@ -76,7 +78,7 @@
                                 <a href="/del/{{$wednesdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$wednesdaySchedules[$j]['id']}}?dayN=2&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail wednesday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$wednesdaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="wednesdayDetailPlace{{$j}}">{{$wednesdaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$wednesdaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$wednesdaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$wednesdaySchedules[$j]['note']}}</p>
@@ -98,7 +100,7 @@
                                 <a href="/del/{{$thursdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$thursdaySchedules[$j]['id']}}?dayN=3&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail thursday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$thursdaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="thursdayDetailPlace{{$j}}">{{$thursdaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$thursdaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$thursdaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$thursdaySchedules[$j]['note']}}</p>
@@ -120,7 +122,7 @@
                                 <a href="/del/{{$fridaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$fridaySchedules[$j]['id']}}?dayN=4&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail friday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$fridaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="fridayDetailPlace{{$j}}">{{$fridaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$fridaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$fridaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$fridaySchedules[$j]['note']}}</p>
@@ -142,7 +144,7 @@
                                 <a href="/del/{{$saturdaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$saturdaySchedules[$j]['id']}}?dayN=5&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail saturday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$saturdaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="saturdayDetailPlace{{$j}}">{{$saturdaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$saturdaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$saturdaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$saturdaySchedules[$j]['note']}}</p>
@@ -164,7 +166,7 @@
                                 <a href="/del/{{$sundaySchedules[$j]['id']}}?termN={{$term_number}}"><img class="deleteImage"  src="../Images/trash.png" width="28" height="28"></a>
                                 <a href="/upd/{{$sundaySchedules[$j]['id']}}?dayN=6&periodN={{$j}}&termN={{$term_number}}"><img class="editImage" src="../Images/pen.png" width="28" height="28"></a>
                                 <div class="classDetail sunday{{$j}}Detail">
-                                    <p class="detailContents detailPlace">場所：{{$sundaySchedules[$j]['place']}}</p>
+                                    <p class="detailContents">場所：<span class="sundayDetailPlace{{$j}}">{{$sundaySchedules[$j]['place']}}</span></p>
                                     <p class="detailContents detailAbsence">欠席数：{{$sundaySchedules[$j]['absence']}}</p>
                                     <p class="detailContents detailCredit">単位数：{{$sundaySchedules[$j]['credit']}}</p>
                                     <p class="detailContents detailNote">メモ：<br>{{$sundaySchedules[$j]['note']}}</p>

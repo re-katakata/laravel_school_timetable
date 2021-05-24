@@ -7,10 +7,9 @@ document.addEventListener( 'DOMContentLoaded' , function( e ) {
     };
     termChanger();
     
-    
+    const days=["monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
+
     const onOffClassDetail=()=>{
-        
-        const days=["monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
         
         for(let i=0;i<7;i++){
             for(let j=0;j<6;j++){
@@ -35,8 +34,32 @@ document.addEventListener( 'DOMContentLoaded' , function( e ) {
                 
             }
         }
+        
     };
     onOffClassDetail();
+    
+    
+    const makeUrlFromplace=()=>{
+        
+        for(let i=0;i<7;i++){
+            for(let j=0;j<6;j++){
+                
+                const dpn=days[i]+"DetailPlace"+j;
+                const getDetailPlace=document.querySelector("."+dpn).textContent;
+                
+                if(getDetailPlace.search(/https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+/gi) != -1){
+                    
+                    const insertDetailPlace='<a href="'+getDetailPlace+'">'+getDetailPlace+'</a>';
+                    console.log(insertDetailPlace);
+                    document.querySelector("."+dpn).innerHTML=insertDetailPlace;
+                    
+                }
+                
+            }
+        }
+        
+    };
+    makeUrlFromplace();
     
 
     
