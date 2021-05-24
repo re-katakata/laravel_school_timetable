@@ -9,14 +9,14 @@
 }
 
 .day_period{
-    margin:40px 8px;
+    margin:40px 95px;
 }
 
 .formContents{
     width: 1200px;
     height:1200px;
-    padding-left: 50px;
-    
+    margin-left: 50%;
+    transform: translateX(-200px);
 }
 .noteContents{
     margin-top: -10px
@@ -32,7 +32,7 @@ input{
 }
 
 .submit_button{
-    margin-left: 40px;
+    margin-left: 50px;
     padding-top: 8px;
     padding-bottom: 8px;
     font-weight: bolder;
@@ -41,14 +41,15 @@ input{
 }
 
 .toInd{
+    
     border:solid 1px black;
     padding:0 10px;
     background-color: black;
     color: white;
     font-weight: bolder;
     position: absolute;
-    top:125px;
-    left:290px;
+    top:10px;
+    left:250px;
 }
 
 .urlok{
