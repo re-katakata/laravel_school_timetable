@@ -38,6 +38,7 @@ html, body {
     width:120px;
     position: relative;
     word-break: break-all;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.4);
 }
     
 .leftPeriod{
@@ -88,6 +89,7 @@ html, body {
     opacity: 0;
     transition-duration:2s;
     overflow-y: scroll;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 }
 
 #tnurl{
