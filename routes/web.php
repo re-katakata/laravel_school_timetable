@@ -33,3 +33,4 @@ Route::delete('/schedules/{schedule}/delete', 'ScheduleController@delete')->midd
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

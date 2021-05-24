@@ -14,10 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! 　　=> 
+                    
+                    <a href="/ind">時間割へ</a>
                 </div>
             </div>
-            <a href="/ind">時間割へ</a>
+            
         </div>
     </div>
 </div>
